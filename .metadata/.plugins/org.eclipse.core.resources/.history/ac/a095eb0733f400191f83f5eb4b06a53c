@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class helloworld {
+
+	
+	static int add(int a, int b)
+	{
+		int result = a + b;
+		return result;
+	}
+
+	static int sub(int a, int b) {
+		int result = a - b;
+		return result;
+	}
+	
+	static int mult(int a , int b) {
+		int result = a * b;
+		return result;
+	}
+	
+	static int div(int a , int b) {
+		int result = a / b;
+		return result;
+	}
+	
+	static double div2(double a , double b) {
+		double result = a / b;
+		return result;
+	}
+	
+
+	static void Iman(String name) {
+		System.out.println( "Hello " + name);
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("Enter Your name: ");
+		Scanner id = new Scanner(System.in);
+		String name = id.next();
+		Iman(name);
+	}
+	
+}
+
+
+
+
+
+
+
+/*System.out.println("Give me a number : ");
+Scanner scanner = new Scanner (System.in);
+int x1 = scanner.nextInt();
+
+System.out.println("Give me another number : ");
+int x2 = scanner.nextInt();
+
+System.out.println(x1 + " + " + x2 + " = " + add(x1,x2));
+
+System.out.println(x1 + " - " + x2 + " = " + sub(x1,x2));
+
+System.out.println(x1 + " * " + x2 + " = " + mult(x1,x2));
+
+System.out.println(x1 + " / " + x2 + " = " + div2(x1,x2));*/

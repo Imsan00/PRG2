@@ -1,0 +1,288 @@
+package views;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import java.awt.Font;
+import javax.swing.JTextPane;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import java.awt.Color;
+import javax.swing.JTextArea;
+import java.awt.SystemColor;
+import javax.swing.UIManager;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class mainFrame extends JFrame {
+
+	private JPanel contentPane;
+	private long num1;
+	private long num2;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					mainFrame frame = new mainFrame();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public mainFrame() {
+		num1 = 0;
+		num2 = 0;
+		setBackground(Color.LIGHT_GRAY);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 352, 393);
+		contentPane = new JPanel();
+		contentPane.setBackground(Color.LIGHT_GRAY);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		
+		JLabel lblNewLabel = new JLabel("Iman's Calculator");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 14));
+		
+		JTextArea txtDisplay = new JTextArea();
+		txtDisplay.setForeground(Color.WHITE);
+		txtDisplay.setFont(new Font("Monospaced", Font.BOLD, 30));
+		txtDisplay.setBackground(Color.GRAY);
+		
+		JButton btn7 = new JButton("7");
+		btn7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				num1 = num1*10+7;
+				txtDisplay.setText(Long.toString(num1));
+			}
+		});
+		btn7.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btn7.setForeground(Color.BLACK);
+		
+		JButton btn8 = new JButton("8");
+		btn8.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btn8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				num1 = num1*10+8;
+				txtDisplay.setText(Long.toString(num1));
+
+			}
+		});
+		btn8.setForeground(Color.BLACK);
+		
+		JButton btn9 = new JButton("9");
+		btn9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				num1 = num1*10+9;
+				txtDisplay.setText(Long.toString(num1));
+
+			}
+		});
+		btn9.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btn9.setForeground(Color.BLACK);
+		
+		
+		
+		JButton btnDivsion = new JButton("\u00F7");
+		btnDivsion.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnDivsion.setForeground(Color.BLACK);
+		
+		JButton btn4 = new JButton("4");
+		btn4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				num1 = num1*10+4;
+				txtDisplay.setText(Long.toString(num1));
+
+			}
+		});
+		btn4.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btn4.setForeground(Color.BLACK);
+		
+		JButton btn5 = new JButton("5");
+		btn5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				num1 = num1*10+5;
+				txtDisplay.setText(Long.toString(num1));
+
+			}
+		});
+		btn5.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btn5.setForeground(Color.BLACK);
+		
+		JButton btn6 = new JButton("6");
+		btn6.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btn6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				num1 = num1*10+6;
+				txtDisplay.setText(Long.toString(num1));
+
+			}
+		});
+		btn6.setForeground(Color.BLACK);
+		
+		JButton btnMultiply = new JButton("\u00D7");
+		btnMultiply.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnMultiply.setForeground(Color.BLACK);
+		
+		JButton btn1 = new JButton("1");
+		btn1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				num1 = num1*10+1;
+				txtDisplay.setText(Long.toString(num1));
+
+			}
+		});
+		btn1.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btn1.setForeground(Color.BLACK);
+		
+		JButton btn2 = new JButton("2");
+		btn2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				num1 = num1*10+2;
+				txtDisplay.setText(Long.toString(num1));
+
+			}
+		});
+		btn2.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btn2.setForeground(Color.BLACK);
+		
+		JButton btn3 = new JButton("3");
+		btn3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				num1 = num1*10+3;
+				txtDisplay.setText(Long.toString(num1));
+			}
+		});
+		btn3.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btn3.setForeground(Color.BLACK);
+		
+		JButton btnSubtract = new JButton("-\t");
+		btnSubtract.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnSubtract.setForeground(Color.BLACK);
+		
+		JButton btn0 = new JButton("0");
+		btn0.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btn0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				num1 = num1*10+0;
+				txtDisplay.setText(Long.toString(num1));
+
+			}
+		});
+		btn0.setForeground(Color.BLACK);
+		
+		JButton btnComma = new JButton(".");
+		btnComma.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnComma.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnComma.setForeground(Color.BLACK);
+		
+		JButton btnPlus = new JButton("+");
+		btnPlus.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnPlus.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnPlus.setForeground(Color.BLACK);
+		
+		JButton btnEqual = new JButton("=");
+		btnEqual.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnEqual.setForeground(Color.BLACK);
+		GroupLayout gl_contentPane = new GroupLayout(contentPane);
+		gl_contentPane.setHorizontalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addContainerGap()
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addComponent(txtDisplay, GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addComponent(btn7, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(btn8, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(btn9, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addComponent(btnDivsion, GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE))
+						.addComponent(lblNewLabel)
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addComponent(btn4, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(btn5, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(btn6, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addComponent(btnMultiply, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addComponent(btn1, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(btn2, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(btn3, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addComponent(btnSubtract, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addComponent(btn0, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(btnComma, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addComponent(btnPlus, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)
+							.addGap(10)
+							.addComponent(btnEqual, GroupLayout.PREFERRED_SIZE, 65, GroupLayout.PREFERRED_SIZE)))
+					.addContainerGap())
+		);
+		gl_contentPane.setVerticalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addComponent(lblNewLabel)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(txtDisplay, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+					.addGap(18)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
+						.addComponent(btnDivsion, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+						.addComponent(btn7, GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+						.addComponent(btn8, GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+						.addComponent(btn9, GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE))
+					.addGap(18)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addComponent(btn4, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
+						.addComponent(btn5, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
+						.addComponent(btn6, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
+						.addComponent(btnMultiply, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addComponent(btn1, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
+						.addComponent(btn2, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
+						.addComponent(btn3, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
+						.addComponent(btnSubtract, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE))
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(18)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+								.addComponent(btn0, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
+								.addComponent(btnComma, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
+								.addComponent(btnPlus, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(btnEqual, GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)))
+					.addContainerGap())
+		);
+		contentPane.setLayout(gl_contentPane);
+	}
+}

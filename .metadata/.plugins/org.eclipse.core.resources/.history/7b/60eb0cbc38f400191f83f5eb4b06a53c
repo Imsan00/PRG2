@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class helloworld {
+
+	
+	static boolean Isodd(int x) {
+		if(x % 2 == 0 )
+			return false; 
+		else 
+			return true;
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Give me a number:");
+		int a = scanner.nextInt();
+		boolean b = Isodd(a);
+		System.out.println(b);
+	}
+	
+	
+	
+}
+
+
+
+
+
+
