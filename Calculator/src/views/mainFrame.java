@@ -244,7 +244,7 @@ public class mainFrame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				b = true;
 				if(num1 > 0 && num2 > 0) {
-					result = getContentPane().add(num1, num2);
+					result = add(num1, num2);
 					num1 = result;
 					num2 = 0;
 					txtDisplay.setText(fmt(result));
